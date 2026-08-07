@@ -1,0 +1,160 @@
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--color-bg-alt);
+}
+
+.hero__content {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__logo {
+  width: 140px;
+  margin-bottom: var(--space-lg);
+}
+
+.hero__title {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-md);
+}
+
+.hero__subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-md);
+  max-width: 560px;
+  margin-bottom: var(--space-lg);
+}
+
+/* ===================== PROBLEMA / DIFERENCIAL ===================== */
+
+.statement {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-md);
+  text-align: center;
+}
+
+.statement__title {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-md);
+}
+
+.statement__text {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-md);
+}
+
+/* ===================== DIFERENCIAIS (GRID) ===================== */
+
+.features {
+  padding: 0 var(--space-md) var(--space-2xl);
+}
+
+.features__grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.feature-card {
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-md);
+}
+
+.feature-card__title {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-md);
+}
+
+.feature-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.feature-card__list li {
+  position: relative;
+  padding-left: 1.6rem;
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+}
+
+.feature-card__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.features__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-xl);
+}
+
+/* ===================== SOBRE / POR QUE ME ESCOLHER ===================== */
+
+.about {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-md);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.about__image img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+}
+
+.about__title {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-md);
+}
+
+.about__text {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-md);
+}
+
+
+
+@media (max-width: 900px) {
+  .features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about__image {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__title {
+    font-size: var(--fs-xl);
+  }
+
+  .statement__title {
+    font-size: var(--fs-lg);
+  }
+}
