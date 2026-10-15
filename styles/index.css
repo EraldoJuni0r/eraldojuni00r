@@ -1,0 +1,304 @@
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-xl) var(--space-md);
+}
+
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  
+  background-image: url("../assets/Background_Contacts\ new.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  pointer-events: none;
+
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 720px;
+}
+
+.hero__avatar {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  margin-bottom: var(--space-md);
+}
+
+.hero__avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-accent-pink);
+}
+
+.hero__avatar-badge {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 2px solid var(--color-bg);
+  color: var(--color-accent-green);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+.hero__greeting {
+  font-family: var(--font-mono);
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.hero__title {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-md);
+}
+
+.hero__description {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-md);
+  max-width: 560px;
+  margin-bottom: var(--space-lg);
+}
+
+.hero__stack {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.stack-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-size: var(--fs-sm);
+
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.stack-badge img {
+  width: 16px;
+  height: 16px;
+}
+
+.hero__scroll {
+  display: inline-flex;
+  animation: bounce 2s infinite;
+}
+
+.hero__scroll img {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* ===================== PROJETOS (GRID) ===================== */
+
+.projects {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-md);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.project-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card__title {
+  font-size: var(--fs-md);
+  margin: var(--space-sm) var(--space-sm) 0.25rem;
+}
+
+.project-card__description {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+  margin: 0 var(--space-sm) var(--space-sm);
+}
+
+
+
+.services {
+  background: var(--color-bg);
+  padding: var(--space-2xl) var(--space-md);
+}
+
+.services__grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.service-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.service-card__icon {
+  width: 28px;
+  height: 28px;
+  margin-bottom: var(--space-sm);
+}
+
+.service-card__title {
+  font-size: var(--fs-md);
+  margin-bottom: 0.25rem;
+}
+
+.service-card__description {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+}
+
+/* ===================== CONTATO ===================== */
+
+/*.contact {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-md);
+  
+} */
+
+.contact {
+  width: 100%;
+  padding: var(--space-2xl) var(--space-md);
+
+  background-image: url("../assets/Background_Contacts\ new.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact__list {
+  max-width: 640px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contact__subtitle {
+  color: var(--color-text-secondary);
+  margin-top: var(--space-xs);
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s ease;
+}
+
+.contact__link:hover {
+  border-color: var(--color-accent-pink);
+}
+
+.contact__link-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.contact__link-left img,
+.contact__link-arrow {
+  width: 18px;
+  height: 18px;
+}
+
+/* ===================== RESPONSIVO ===================== */
+
+@media (max-width: 900px) {
+  .projects__grid,
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__title {
+    font-size: var(--fs-xl);
+  }
+
+  .projects__grid,
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__bg {
+    width: 100%;
+    opacity: 0.15;
+  }
+}
